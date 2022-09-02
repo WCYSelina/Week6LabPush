@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="tute.css"/>
+        <link rel="stylesheet" href="./css/bootstrap.min.css"/>
+    </head>
+    <body>
+        <div class="jumpbotron text-center">
+            <h1>Welcome to POMS App (Week 6)</h1>
+        </div>
+            <a type="button" class="btn btn-primary btn-lg" href="/">Home</a>
+            <a type="button" class="btn btn-primary btn-lg" href="/addparcel">Add Parcel</a>
+            <a type="button" class="btn btn-primary btn-lg" href="/deleteparcel">Delete Parcel by ID</a>
+            <a type="button" class="btn btn-primary btn-lg" href="/deletebydetails">Delete Parcel by sender and weight</a>
+            <a type="button" class="btn btn-primary btn-lg" href="/updateparcel">Update Parcel</a>
+            <a type="button" class="btn btn-primary btn-lg" href="/listparcels">List All Parcels</a>
+            <a type="button" class="btn btn-primary btn-lg" href="/listbysender">List Parcels by sender</a>
+            <a type="button" class="btn btn-primary btn-lg" href="/listbyweightrange">List Parcels by weight range</a>
+
+
+            <br/>
+            <table class="table table-hover table-dark">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Sender</th>
+                        <th scope="col">Address</th>
+                        <th scope="col">Weight</th>
+                        <th scope="col">is Fragile?</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for(let i=0;i<db.length;i++){ %>
+                        <tr>
+                            <td><%=db[i].id %></td>
+                            <td><%=db[i].sender %></td>
+                            <td><%=db[i].address %></td>
+                            <td><%=db[i].weight %></td>
+                            <td><%=db[i].isFragile %></td>
+                        </tr>
+                    <%}%>
+                </tbody>
+            </table>
+    </body>
+</html>

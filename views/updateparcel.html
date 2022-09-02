@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="tute.css"/>
+        <link rel="stylesheet" href="./css/bootstrap.min.css"/>
+    </head>
+    <style>
+    td{
+         border:1px solid black;
+        
+    }
+    #table_no_space{
+        border-collapse: collapse;
+    }
+    p{
+        font-size: 20px;
+    }
+    </style>
+    <body>
+        <div class="jumpbotron text-center">
+            <h1>Welcome to POMS App (Week 6)</h1>
+        </div>
+            <a type="button" class="btn btn-primary btn-lg" href="/">Home</a>
+            <a type="button" class="btn btn-primary btn-lg" href="/addparcel">Add Parcel</a>
+            <a type="button" class="btn btn-primary btn-lg" href="/deleteparcel">Delete Parcel by ID</a>
+            <a type="button" class="btn btn-primary btn-lg" href="/deletebydetails">Delete Parcel by sender and weight</a>
+            <a type="button" class="btn btn-primary btn-lg" href="/updateparcel">Update Parcel</a>
+            <a type="button" class="btn btn-primary btn-lg" href="/listparcels">List All Parcels</a>
+            <a type="button" class="btn btn-primary btn-lg" href="/listbysender">List Parcels by sender</a>
+            <a type="button" class="btn btn-primary btn-lg" href="/listbyweightrange">List Parcels by weight range</a>
+
+
+            <br/>
+        <h3>Update Parcel</h3>
+        <form action="updateparc" method = "POST">
+            <table style="width: 80%" id="table_no_space">
+                <tr>
+                    <td><label>ID</label></td>
+                    <td><input type="text" name="id"></td>
+                </tr>
+                <tr>
+                    <td><label>Sender</label></td>
+                    <td><input type="text" name="sender"></td>
+                </tr>
+                <tr>
+                    <td><label>Address</label></td>
+                    <td><input type="text" name="addr"></td>
+                </tr>
+                <tr>
+                    <td><label>Weight</label></td>
+                    <td><input type="text" name="weight"></td>
+                </tr>
+                <tr>
+                    <td><label for="fragile">is Fragile?</label></td>
+                    <td><select name="fragile" id="fragile">
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" name="submit"></td>
+                    <td> </td>
+                </tr>
+            </table>
+        </form>
+        <p>Click <a href="/">HERE</a> to return to home page !!!</p>
+    </body>
+</html>
